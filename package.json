@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/fonts": "^0.11.0",
     "@nuxtjs/tailwindcss": "^6.13.2",
     "daisyui": "^5.0.9",
     "nuxt": "^3.16.1",
