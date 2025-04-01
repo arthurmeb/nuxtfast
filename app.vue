@@ -37,9 +37,7 @@
                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs sm:text-sm font-medium bg-blue-500 text-white whitespace-nowrap">
                   {{ result.score ? Math.round(result.score * 100) : Math.round(result.similarity * 100) }}% Match
                 </span>
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs sm:text-sm font-medium bg-red-500 text-white">
-                  Reddit
-                </span>
+
               </div>
             </div>
             <p class="text-gray-600 mt-2">{{ result.body }}</p>
@@ -60,9 +58,7 @@
                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs sm:text-sm font-medium bg-blue-500 text-white whitespace-nowrap">
                   {{ result.score ? Math.round(result.score * 100) : Math.round(result.similarity * 100) }}% Match
                 </span>
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs sm:text-sm font-medium bg-orange-500 text-white">
-                  HN
-                </span>
+
               </div>
             </div>
             <p class="text-gray-600 mt-2">{{ result.body }}</p>
