@@ -108,7 +108,8 @@ const isLoading = ref(false);
 const results = ref([]);
 const jobId = ref(null);
 let pollInterval = null;
-
+// const apiBase = 'http://m084gkw4wkk0swckkgg484o0.188.245.246.101.sslip.io'
+const apiBase = 'http://localhost:8003'
 const submitKeywords = async () => {
   if (!keywords.value) return;
   
@@ -119,9 +120,10 @@ const submitKeywords = async () => {
 
   try {
     // Send search request
-    const response = await fetch('http://localhost:8003/search', {
+    const response = await fetch(`${apiBase}/search`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      mode: 'cors',
       body: JSON.stringify({ keywords: keywords.value })
     });
     
@@ -141,10 +143,11 @@ const checkJobStatus = async () => {
   if (!jobId.value) return;
   
   try {
-    const response = await fetch(`http://localhost:8003/search/${jobId.value}`);
+    const response = await fetch(`${apiBase}/search/${jobId.value}`);
     const data = await response.json();
     
     if (data.status === 'completed') {
+      console.log('Succeeded!')
       clearInterval(pollInterval);
       results.value = data.results;
       console.log('results:', results.value)
