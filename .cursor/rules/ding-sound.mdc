@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+1. Play the ding sound effect (assets/sounds/ding.mp3) in these specific situations:
+   - When a command prompt appears and needs acceptance
+   - When a generation task completes
+
+Implementation details:
+   - Use the cursor rule system to trigger these actions
+   - The sound should be played exactly once per event
+
+   - File path to sound: assets/sounds/ding.mp3
